@@ -1,0 +1,128 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3835,        120]
+NotebookOptionsPosition[      3333,        102]
+NotebookOutlinePosition[      3756,        119]
+CellTagsIndexPosition[      3713,        116]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"thisfolder", "=", 
+   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{
+    RowBox[{"Import", "[", 
+     RowBox[{
+      RowBox[{"StringJoin", "[", 
+       RowBox[{
+       "thisfolder", ",", "\"\</kplr*_dr25-stellarposterior.txt\>\""}], "]"}],
+       ",", "\"\<Table\>\""}], "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"data", "[", 
+    RowBox[{"[", 
+     RowBox[{"5", ";;", "All"}], "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"teff", "=", 
+   RowBox[{"data", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"feh", "=", 
+   RowBox[{"data", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "3"}], "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"logg", "=", 
+   RowBox[{"data", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "2"}], "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"test", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<Teff = \>\"", ",", 
+       RowBox[{"Round", "[", 
+        RowBox[{
+         RowBox[{"Median", "[", "teff", "]"}], ",", "0.1"}], "]"}], ",", 
+       RowBox[{"Round", "[", 
+        RowBox[{
+         RowBox[{"StandardDeviation", "[", "teff", "]"}], ",", "0.1"}], 
+        "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<feh = \>\"", ",", 
+       RowBox[{"Round", "[", 
+        RowBox[{
+         RowBox[{"Median", "[", "feh", "]"}], ",", "0.01"}], "]"}], ",", 
+       RowBox[{"Round", "[", 
+        RowBox[{
+         RowBox[{"StandardDeviation", "[", "feh", "]"}], ",", "0.01"}], 
+        "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<logg = \>\"", ",", 
+       RowBox[{"Round", "[", 
+        RowBox[{
+         RowBox[{"Median", "[", "logg", "]"}], ",", "0.001"}], "]"}], ",", 
+       RowBox[{"Round", "[", 
+        RowBox[{
+         RowBox[{"StandardDeviation", "[", "logg", "]"}], ",", "0.001"}], 
+        "]"}]}], "}"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"StringJoin", "[", 
+    RowBox[{"thisfolder", ",", "\"\<TFL.txt\>\""}], "]"}], ",", "test", ",", 
+   "\"\<Table\>\""}], "]"}]}], "Input",
+ CellChangeTimes->{{3.795269892821443*^9, 3.795269927885665*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"dbf3b860-42db-4078-a4f9-ed40eb308e89"],
+
+Cell[BoxData["\<\"/Users/dkipping/Storage1/Work/Documents/Transit_Work/PAPERS/\
+MoonFold/KOI-1841.01/isochrones/TFL.txt\"\>"], "Output",
+ CellChangeTimes->{{3.795269922545787*^9, 3.795269929014164*^9}, 
+   3.796983652599279*^9, 3.797010039659667*^9, 3.83093724730334*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"2f61a5bc-cdc4-422a-8341-25171a611945"]
+}, Open  ]]
+},
+Evaluator->"LinkSnooper",
+WindowSize->{845, 396},
+WindowMargins->{{91, Automatic}, {Automatic, 67}},
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"fdf27aa0-0303-4a1a-b537-c8a05e268063"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2385, 71, 220, "Input",ExpressionUUID->"dbf3b860-42db-4078-a4f9-ed40eb308e89"],
+Cell[2968, 95, 349, 4, 56, "Output",ExpressionUUID->"2f61a5bc-cdc4-422a-8341-25171a611945"]
+}, Open  ]]
+}
+]
+*)
+
